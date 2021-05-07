@@ -1,4 +1,4 @@
-#bpence
+
 Bpence (styled: bpence) adalah sebuah sistem yang mengonversi Sequence Diagram menjadi Business Process Modeling Notation (BPMN). Proyek ini dikembangkan oleh Kelompok 1 kelas I1 mata kuliah Pembangunan Perangkat Lunak (Praktikum).
 
 Anggota kelompok:
