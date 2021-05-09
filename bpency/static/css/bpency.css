@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    background-color:#E0C19F;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.5px;
+    color:#49290C;
+}
+
+div img {
+    position: absolute;
+    height: 516px;
+    right: -68px;
+    bottom: 0px;
+}
+
+div h1 {
+    position: absolute;
+    width: 500px;
+    height: 108px;
+    left: 65px;
+    top: 252px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: semibold;
+    font-size: 14px;
+    border: 0;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: 'url('img/arrow-right-line.png')';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+button#mainbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 19px;
+    background-color: #2C2B37;
+    color: #FAFAFA;
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    width: 251.5px;
+    height: 74px;
+    left: 65px;
+    top: 402px;
+    border-radius: 4px;
+    outline: none;
+}
+
+button#mainbtn:hover,
+button#mainbtn:focus {
+    background-color:#343438;
+    transition: 0.25s;
+}
+
+button#arrow {
+    width: 25px;
+    height: 24px;
+}
