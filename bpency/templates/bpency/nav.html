@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    </head>
+    <body>
+        <header id="gen">
+            <nav id="top-navbar">
+            <div id="nav-home">
+                <a href="/"><img src={% static 'img/logo.png' %} alt="logo"></a>
+            </div>
+            <div class="nav-top-menu-rightside">
+                <!-- menu -->
+                <ul class="nav-top-menu">
+                    <li class="menu-item">
+                        <a role="button">Login</a>
+                    </li>
+                    <li class="menu-item">
+                        <a role="button" class="sign-btn">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        <div id="ibm-mobilemenu">
+            <div class="ibm-mobilemenu-close">
+                <button class="ibm-close-link">
+                    <img src="icons/close.svg" alt="closemenu">
+                </button>
+            </div>
+            <div class="ibm-mobilemenu-section"></div>
+        </div>
+        <div id="ibm-mobilemenu-overlay"></div>
+        <script>
+            $(".menu-toggle").click(function(){
+            $("#ibm-mobilemenu").addClass('ibm-mobilemenu-show');
+            $("body").addClass('ibm-mobilemenu-overlay-show');
+            });
+            $(".ibm-mobilemenu-close").click(function(){
+            $("#ibm-mobilemenu").removeClass('ibm-mobilemenu-show');
+            $("body").removeClass('ibm-mobilemenu-overlay-show');
+            })
+        </script>   
+    </body>
+</html>
