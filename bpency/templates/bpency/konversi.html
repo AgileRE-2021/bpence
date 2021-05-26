@@ -1,4 +1,4 @@
-{% load static %}
+`{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +14,11 @@
             <h1>Masukkan sequence diagram</h1>
             <p>Mohon menempelkan kode PlantUML sequence diagram di sini. Kode lain tidak akan bekerja.</p>
             </br>
-            <form action="">
+            <form method="POST">
+                {% csrf_token %}
                 <textarea name="codeplant" placeholder="Tempelkan kode PlantUML di sini..."></textarea>
                 </br>
-                <input type="submit" id="sequence" style="width: 565px" value="Konversi menjadi BPMN">
+                <input type="submit" id="sequence" style="width: 565px">
             </form>
         </div>
         <div class="column">
