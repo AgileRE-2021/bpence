@@ -11,7 +11,8 @@ def nav(request):
 
 def konversi(request):
     
-    sd = SD(code=request.POST["codeplant"])
-    sd.save()
+    if request.method == 'POST':
+        sd = SD(code=request.POST["codeplant"])
+        sd.save()
 
     return render(request, 'bpency/konversi.html')
