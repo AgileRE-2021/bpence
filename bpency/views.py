@@ -16,3 +16,9 @@ def konversi(request):
         sd.save()
 
     return render(request, 'bpency/konversi.html')
+
+def login(request):
+    return render(request, 'bpency/login.html')
+
+def signup(request):
+    return render(request, 'bpency/signup.html')
