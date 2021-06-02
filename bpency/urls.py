@@ -6,7 +6,11 @@ urlpatterns = [
     # ex: / or empty
     path('', views.index, name='index'),
     # ex: /login
-    path('login', views.nav, name='login'),
+    path('login', views.login, name='login'),
+    # ex: /signup
+    path('signup', views.signup, name='signup'),
     # ex: /konversi
     path('konversi', views.konversi, name='konversi'),
+    # ex: /nav
+    path('nav', views.nav, name='nav'),
 ]
