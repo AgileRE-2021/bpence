@@ -9,20 +9,26 @@
     <title>konversi - konversi artefak </title>
 </head>
 <body id="konversi">
+    <header>
+        <a href='/' class=text-btn id="logo">bpence</a>
+        <div class="topnav-right">
+            <a href='login' class=text-btn>Login</a>
+            <a href='signup' id=signup-btn>Sign Up</a>
+        </div>
+    </header>
     <div class="row">
         <div class="column">
             <h1>Masukkan sequence diagram</h1>
-            </br>
             <p>Mohon menempelkan kode PlantUML sequence diagram di sini. Kode lain tidak akan bekerja.</p>
             <form method="POST">
                 {% csrf_token %}
-                <textarea name="codeplant" placeholder="Tempelkan kode PlantUML di sini..."></textarea>
+                <textarea name="codeplant" style="width: 565px" placeholder="Tempelkan kode PlantUML di sini..."></textarea>
                 </br>
                 <input type="submit" id="sequence" style="width: 565px">
             </form>
         </div>
         <div class="column">
-
+            <!--gambar loading.... hanya muncul kalo beneran loading-->
         </div>
     </div>
 </body>

@@ -1,5 +1,86 @@
+{% load static %}
 /*import font Poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+header{
+    display: inline;
+    align-content: center;
+}
+
+/* Left-aligned section inside the top navigation */
+.topnav-left {
+    width: 40%;
+    float: left;
+}
+
+/*logo bpence*/
+.logo{
+    width: 99px;
+    display: inline;
+}
+
+#konversi #logo{
+    color: #FAFAFA;
+}
+
+#konversi #logo:hover{
+    color: #F0EEEC;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+    padding-right: 40px;
+}
+
+.text-btn {
+    /*the font*/
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 600; /*semibold*/
+    color: black;
+    /*the button*/
+    text-decoration: none;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.text-btn:hover{
+    color: #363636
+}
+
+.text-btn#logo{
+    font-size: 20px;
+    padding: 0px;
+    margin-top: 0;
+}
+
+#konversi .text-btn {
+    color: #FAFAFA;
+}
+
+.topnav-right .text-btn{
+    margin-right: 14px;
+}
+
+#signup-btn{
+    /*the font*/
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 600; /*semibold*/
+    color: black;
+    /*the button*/
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #F0EEEC;
+    border-radius: 4px;
+}
+
+#signup-btn:hover{
+    background-color: #E5E4E3;
+}
 
 /*body*/
 body {
@@ -14,6 +95,10 @@ body#home {
 
 body#konversi {
     background:#2C2B37;
+}
+
+body#white{
+    background-color: #FAFAFA;
 }
 
 /*heading 1*/
@@ -101,11 +186,17 @@ input[type=submit] {
     line-height: 27px;
 }
 
-div img {
+input[type=submit]:hover {
+    background-color: #DDC6A7;
+}
+
+#people {
     position: absolute;
     height: 516px;
     right: -68px;
     bottom: 0px;
+    object-fit: cover;
+    object-position: 50% 0;
 }
 
 div h1 {
@@ -131,7 +222,7 @@ button {
 }
   
 .button span:after {
-    content: 'url('img/arrow-right-line.png')';
+    content: "🡢";
     position: absolute;
     opacity: 0;
     top: 0;
@@ -140,7 +231,7 @@ button {
 }
   
 .button:hover span {
-    padding-right: 25px;
+    padding-right: 30px;
 }
   
 .button:hover span:after {
