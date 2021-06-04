@@ -6,9 +6,9 @@ urlpatterns = [
     # ex: / or empty
     path('', views.index, name='index'),
     # ex: /login
-    path('login', views.login_view, name='login'),
+    path('login', views.login, name='login'),
     # ex: /signup
-    path('signup', views.signup_view, name='signup'),
+    path('signup', views.signup, name='signup'),
     # ex: /konversi
     path('konversi', views.konversi, name='konversi'),
 ]

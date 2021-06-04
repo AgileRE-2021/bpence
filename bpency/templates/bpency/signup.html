@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Sign Up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    
 </head>
 <body>
     <div style="margin-bottom: 55%">
@@ -23,22 +24,44 @@
             <h1 style="margin-bottom: 30px; font-weight: 600">Sign Up</h1>
             <p style="text-align: center; font-weight: 400;">Daftar sekarang untuk menyimpan <br> histori konversi artefak.</p>
 
-            <!-- kotak nama panggilan -->
-            <input class="form-login" id="name" aria-describedby="nameHelp" placeholder="Nama panggilan">
+            <form method="POST" id="loginForm">
+                {% csrf_token %}
+                <!-- kotak nama panggilan -->
+                <input class="form-login" name="name" id="name" aria-describedby="nameHelp" placeholder="Nama panggilan" required>
 
-            <!-- kotak email -->
-            <input class="form-login" id="email" aria-describedby="emailHelp" placeholder="Email">
-            
-            <!-- kotak password -->
-            <input class="form-login" id="password" aria-describedby="passHelp" placeholder="Password">
+                <!-- kotak email -->
+                <input class="form-login" name="email" id="email" type="email" aria-describedby="emailHelp" placeholder="Email" required>
+                
+                <!-- kotak password -->
+                <input class="form-login" name="password" id="password" type="password" aria-describedby="passHelp" placeholder="Password" required>
 
-            <!-- kotak confirm password -->
-            <input class="form-login" id="confirm" aria-describedby="confpassHelp" placeholder="Confirm password">
+                <!-- kotak confirm password -->
 
-            <button style="text-align: center; font-weight: 600; border: 0px;" type="submit" id="login" class="button">Sign me up</button>
+                
+                <input class="form-login" id="confirm_password" type="password" aria-describedby="confpassHelp" placeholder="Confirm password" required>
+
+                <input style="text-align: center; font-weight: 600; border: 0px;" type="submit" id="login" class="button" value="Sign Up">
+            </form>
             
             <p style="text-align: center" class="form-text">Sudah ada akun? <a href="login">Login sekarang</a></p>
         </div>
     </div>
+
+    <script>
+        var password = document.getElementById("password")
+        , confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+
 </body>
 </html>
