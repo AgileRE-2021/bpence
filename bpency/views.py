@@ -34,3 +34,5 @@ def signup(request):
         usr.save()
     return render(request, 'bpency/signup.html')
 
+def jajal(request):
+    return render(request, 'bpency/jajal.html')

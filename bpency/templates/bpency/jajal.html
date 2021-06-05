@@ -1,0 +1,69 @@
+`{% load static %}
+<!DOCTYPE html>
+<html>
+<!-- Mirrored from design.inf.usi.ch/bpmn-sketch-miner/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 06:36:56 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>BPMN Sketch Miner</title>
+    <link rel="stylesheet" href="{% static 'css/style7ea1.css' %}">
+</head>
+<body data-src="">
+    <header>
+        <section>
+            <h1>BPMN</h1>
+            <nav>
+                
+            </nav>
+            <div style="flex:1"></div>
+        </section>
+        <section>
+            <nav>
+                <span id="button-option-layout">Layout: 
+                    <a id="button-option-layout-orientation-vertical" href="#" title="Vertical">↓</a>
+                    <a id="button-option-layout-orientation-horizontal" href="#" title="Horizontal">→</a>
+                </span>
+                <span id="button-option-layout">Zoom: 
+                    <a id="button-option-layout-zoom-none" href="#" title="1:1">1:1</a>
+                    <a id="button-option-layout-zoom-fit" href="#" title="Fit">Fit</a>
+                </span>
+                <span id="button-share">Share: 
+                    <a id="button-share-url" href="#">Link</a>
+                </span>
+                <span id="button-export">Export: 
+                    <a id="button-export-svg" href="#">SVG</a>
+                    <a id="button-export-png" href="#">PNG</a>
+                    <a id="button-export-bpmn" href="#">BPMN</a>
+                </span>
+            </nav>
+        </section>
+    </header>
+    <aside class="popup">
+        <section></section>
+        <a class="close" href="#">&times;</a>
+    </aside>
+    <main>
+        <textarea id="logtext" oninput="live(this.value+'\n',true);" placeholder="What&#39;s your process like today?">
+            Welcome to BPMN Sketch Miner:
+
+            Draw simple BPMN diagrams
+            (timer quickly)
+            as you describe them with stories
+
+            ///Start by writing your list of tasks
+            ///one on each line...
+        </textarea>
+        <div>
+            <svg id="restalk" style=""> </svg>
+        </div>
+        </main>
+        <div style="display: none">
+            <footer>
+                <progress id="progress" style="display: none"></progress>
+                <p id="status" style="display: none"></p>
+            </footer>
+            <textarea id="explog"></textarea>
+        </div>
+        <script src="{% static 'js/scripts7ea1.js' %}"></script> 
+    </body>
+<!-- Mirrored from design.inf.usi.ch/bpmn-sketch-miner/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 06:36:58 GMT -->
+</html>
