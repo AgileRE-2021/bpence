@@ -1,7 +1,6 @@
 `{% load static %}
 <!DOCTYPE html>
 <html>
-<!-- Mirrored from design.inf.usi.ch/bpmn-sketch-miner/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 06:36:56 GMT -->
 <head>
     <meta charset="utf-8">
     <title>BPMN Sketch Miner</title>
@@ -26,13 +25,9 @@
                     <a id="button-option-layout-zoom-none" href="#" title="1:1">1:1</a>
                     <a id="button-option-layout-zoom-fit" href="#" title="Fit">Fit</a>
                 </span>
-                <span id="button-share">Share: 
-                    <a id="button-share-url" href="#">Link</a>
-                </span>
                 <span id="button-export">Export: 
                     <a id="button-export-svg" href="#">SVG</a>
                     <a id="button-export-png" href="#">PNG</a>
-                    <a id="button-export-bpmn" href="#">BPMN</a>
                 </span>
             </nav>
         </section>
@@ -42,7 +37,7 @@
         <a class="close" href="#">&times;</a>
     </aside>
     <main>
-        <textarea id="logtext" oninput="live(this.value+'\n',true);" placeholder="What&#39;s your process like today?">
+        <textarea id="logtext" oninput="live(this.value+'\n',true);" placeholder="What&#39;s your process like today?" disabled>
             Welcome to BPMN Sketch Miner:
 
             Draw simple BPMN diagrams
@@ -65,5 +60,4 @@
         </div>
         <script src="{% static 'js/scripts7ea1.js' %}"></script> 
     </body>
-<!-- Mirrored from design.inf.usi.ch/bpmn-sketch-miner/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 06:36:58 GMT -->
 </html>
