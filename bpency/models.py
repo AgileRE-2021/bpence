@@ -11,14 +11,14 @@ class userD(models.Model):
         return "{}. {}".format(self.id, self.nama)
 
 class SD(models.Model):
-    idUser = models.CharField(max_length=12, default='2')
     code = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return "{}. {}".format(self.id, self.code)
+    #def __str__(self):
+    #    return "{}. {}".format(self.code)
 
 class BPMN(models.Model):
-    idSD = models.ForeignKey(SD, on_delete=models.CASCADE)
     code = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
+    #def __str__(self):
+    #    return "{}. {}".format(self.code)
