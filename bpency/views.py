@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.http.response import HttpResponseRedirect
 from django.template import Context, loader
 from django.shortcuts import render
 from .models import SD, userD, BPMN
@@ -70,10 +71,14 @@ def konversi(request):
                         splitt = sd[j - 1].split(' -> ')
                         task += [splitt[1]]
 
+        hasil = ""
+
         for i in range (len(task)):
             task[i] = task[i].replace('_',' ').replace('()','').replace('(',' ').replace(')',' ')
+            hasil += task[i]
+            hasil += "\n"
 
-        bpmn = BPMN(code=task)
+        bpmn = BPMN(code=hasil)
         bpmn.save()
 
     return render(request, 'bpency/konversi.html')
@@ -94,4 +99,5 @@ def signup(request):
     return render(request, 'bpency/signup.html')
 
 def jajal(request):
+    bpmn = BPMN.objects.all()
     return render(request, 'bpency/jajal.html')
