@@ -2,35 +2,12 @@
 /*import font Poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-header{
-    display: inline;
-    align-content: center;
-}
-
-/* Left-aligned section inside the top navigation */
-.topnav-left {
-    width: 40%;
-    float: left;
-}
-
-/*logo bpence*/
-.logo{
-    width: 99px;
-    display: inline;
-}
-
-#konversi #logo{
-    color: #FAFAFA;
-}
-
-#konversi #logo:hover{
-    color: #F0EEEC;
-}
-
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-    float: right;
-    padding-right: 40px;
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .text-btn {
@@ -82,14 +59,9 @@ header{
     background-color: #E5E4E3;
 }
 
-/*body*/
-body {
-    font-family: 'Poppins', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    padding: 40px
-}
-
 body#home {
+    margin: 0px;
+    padding: 0px;
     background:#E0C19F;
 }
 
@@ -103,6 +75,7 @@ body#white{
 
 /*heading 1*/
 h1 {
+    margin: 0px;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
@@ -111,6 +84,7 @@ h1 {
 }
 
 body#home h1{
+    margin:0;
     color:#49290C;
 }
 

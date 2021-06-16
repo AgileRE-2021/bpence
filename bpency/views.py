@@ -101,3 +101,9 @@ def signup(request):
 def jajal(request):
     bpmn = BPMN.objects.all()
     return render(request, 'bpency/jajal.html')
+
+def konvresult(request):
+    return render(request, 'bpency/konv-result.html')
+
+def konvload(request):
+    return render(request, 'bpency/konv-load.html')

@@ -11,6 +11,10 @@ urlpatterns = [
     path('signup', views.signup, name='signup'),
     # ex: /konversi
     path('konversi', views.konversi, name='konversi'),
+    # ex: /konversi-load
+    path('konversi-load', views.konvload, name='loading_konversi'),
+    # ex: /konversi/result
+    path('konversi/result', views.konvresult, name='hasil_konversi'),
 
     path('jajal', views.jajal, name='jajal'),
 ]

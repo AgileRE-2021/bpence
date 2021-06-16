@@ -1,49 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #E0C19F;
-}
-
-.navbar{
-  margin-top: 20px;
-}
-
-.btn{
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 21px;
-  color: #000000;
-}
-
-.bg-light{
-  background-color: #E0C19F !important;
-}
-
-.navbar-brand{
-  margin-left: 65px;
-}
-
-.rightside{
-  margin-right: 65px;
-  float: right;
-  position: relative;
-}
-
-.btn-secondary{
-  background-color: #F0EEEC;
-  border-color: #fff;
-  color: rgb(0,0,0);
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-left: 20px;
+body{
+  background:#E0C19F;
 }
 
 .save-btn{
@@ -64,7 +22,10 @@ body {
 
   background: #2C2B37;
   border-radius: 5px;
-  color:#FAFAFA
+  color:#FAFAFA;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
 }
 
 .reconv-btn {

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div style="margin-bottom: 40px;">
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light">
             <a class="navbar-brand" href="/">
                 <img src="{% static 'img/logo.png' %}" alt="logo" width="80px">
             </a>
@@ -24,10 +24,10 @@
             <p style="text-align: center; font-weight: 400;">Masuk sekarang dan lanjutkan <br> konversi artefak Anda.</p>
 
             <!-- kotak email -->
-            <input class="form-login" id="email" aria-describedby="emailHelp" placeholder="Email">
+            <input class="form-login" id="email" aria-describedby="emailHelp" placeholder="Email" required>
 
             <!-- kotak password -->
-            <input class="form-login" id="password" aria-describedby="passHelp" placeholder="Password">
+            <input type="password" class="form-login" id="password" aria-describedby="passHelp" placeholder="Password" required>
             <a href="#" id="passHelp" class="form-text" style="margin-bottom: 20px;">Lupa Password?</a>
 
             <button style="text-align: center; font-weight: 600; border: 0px;" type="submit" id="login" class="button">Log me in</button>

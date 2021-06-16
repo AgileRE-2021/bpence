@@ -55,6 +55,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    text-decoration: none;
 
     width: 364px;
     height: 58px;
@@ -78,7 +79,6 @@
     background-color: #DDC6A7;
 }
 
-
 .form-text{
     color: #4E4B4B;
 }
@@ -96,10 +96,7 @@ a:hover {
     font-weight: 600;
     line-height: 21px;
     color: black;
-}
-
-.bg-light{
-    background-color: rgb(255, 255, 255) !important;
+    text-decoration: none;
 }
 
 .navbar-brand{
@@ -118,4 +115,5 @@ a:hover {
     color: black;
     border-radius: 4px;
     padding: 10px 15px;
+    text-decoration: none;
 }
