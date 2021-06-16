@@ -7,6 +7,9 @@ from .models import SD, userD, BPMN
 def index(request):
     return render(request, 'bpency/index.html')
 
+def indexacc(request):
+    return render(request, 'bpency/index-logged.html')
+
 def login_view(request):
     return render(request, 'bpency/login.html')
 

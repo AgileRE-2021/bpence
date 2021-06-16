@@ -10,7 +10,7 @@
 
 body {
     background: #E0C19F;
-    overflow: hidden; /* Hide scrollbars */
+    overflow: hidden;
 }
 
 nav {
@@ -37,6 +37,19 @@ h1 {
     color: #49290C;
     position: absolute;
     top: 252px;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom: 20px;
+    color: #49290C;
+
+    position: absolute;
+    top: 320px;
 }
 
 button {
