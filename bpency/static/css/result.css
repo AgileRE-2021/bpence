@@ -2,6 +2,7 @@
 
 body{
   background:#E0C19F;
+  overflow: hidden; /* Hide scrollbars */
 }
 
 .save-btn{

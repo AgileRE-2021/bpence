@@ -10,6 +10,7 @@
 
 body {
   background: rgba(44,43,55,1);
+  overflow: hidden; /* Hide scrollbars */
 }
 
 .row {
@@ -204,102 +205,6 @@ lottie-player {
   margin-right: auto;
 }
 
-.v4_300 {
-  width: 304px;
-  color: rgba(250,250,250,1);
-  position: absolute;
-  top: 0px;
-  left: 60px;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 36px;
-  opacity: 1;
-  text-align: left;
-}
-
-.v4_301 {
-  width: 425px;
-  color: rgba(250,250,250,1);
-  position: absolute;
-  top: 60px;
-  left: 0px;
-  font-family: Poppins;
-  font-weight: Regular;
-  font-size: 24px;
-  opacity: 1;
-  text-align: center;
-}
-
-.v37_608 {
-  width: 570px;
-  height: 115px;
-  background: url("../images/v37_608.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin: 7px;
-  opacity: 1;
-  position: absolute;
-  top: 138px;
-  left: 65px;
-  overflow: hidden;
-}
-
-.v37_609 {
-  width: 560px;
-  color: rgba(224,193,159,1);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 36px;
-  opacity: 1;
-  text-align: left;
-}
-
-.v37_610 {
-  width: 570px;
-  color: rgba(119,118,139,1);
-  position: absolute;
-  top: 61px;
-  left: 0px;
-  font-family: Poppins;
-  font-weight: Regular;
-  font-size: 18px;
-  opacity: 1;
-  text-align: left;
-}
-
-.v37_611 {
-  width: 570px;
-  height: 364px;
-  background: url("../images/v37_611.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin: 38px;
-  opacity: 1;
-  position: absolute;
-  top: 282px;
-  left: 65px;
-  overflow: hidden;
-}
-
-.v37_612 {
-  width: 570px;
-  height: 259px;
-  background: url("../images/v37_612.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin: 27px;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
 .name {
   color: #fff;
 }
