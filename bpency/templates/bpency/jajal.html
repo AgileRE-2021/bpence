@@ -1,37 +1,26 @@
-`{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>BPMN Sketch Miner</title>
-    <link rel="stylesheet" href="{% static 'css/style7ea1.css' %}">
+    <title>Hasil Konversi</title>
+    <!--untuk header-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!--css bawaan-->
+    <link rel="stylesheet" href="{% static 'css/hasil.css' %}">
 </head>
-<body data-src="">
-    <header>
-        <section>
-            <h1>BPMN</h1>
-            <nav>
-                
-            </nav>
-            <div style="flex:1"></div>
-        </section>
-        <section>
-            <nav>
-                <span id="button-option-layout">Layout: 
-                    <a id="button-option-layout-orientation-vertical" href="#" title="Vertical">↓</a>
-                    <a id="button-option-layout-orientation-horizontal" href="#" title="Horizontal">→</a>
-                </span>
-                <span id="button-option-layout">Zoom: 
-                    <a id="button-option-layout-zoom-none" href="#" title="1:1">1:1</a>
-                    <a id="button-option-layout-zoom-fit" href="#" title="Fit">Fit</a>
-                </span>
-                <span id="button-export">Export: 
-                    <a id="button-export-svg" href="#">SVG</a>
-                    <a id="button-export-png" href="#">PNG</a>
-                </span>
-            </nav>
-        </section>
-    </header>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="/">
+            <img src="{% static 'img/logo.png' %}" alt="logo" width="80px">
+        </a>
+
+        <div class="rightside">
+            <a href="login" class="btn" role="button">Login</a>
+            <a href="signup" class="btn btn-secondary" role="button">Sign Up</a>
+        </div>
+    </nav>
     <aside class="popup">
         <section></section>
         <a class="close" href="#">&times;</a>
@@ -47,7 +36,21 @@ as you describe them with stories
 ///Start by writing your list of tasks
 ///one on each line...
         </textarea>
-        <div>
+        <div class="second-nav">
+            <nav>
+                <span id="button-option-layout">Layout: 
+                    <a id="button-option-layout-orientation-vertical" href="#" title="Vertical">↓</a>
+                    <a id="button-option-layout-orientation-horizontal" href="#" title="Horizontal">→</a>
+                </span>
+                <span id="button-option-layout">Zoom: 
+                    <a id="button-option-layout-zoom-none" href="#" title="1:1">1:1</a>
+                    <a id="button-option-layout-zoom-fit" href="#" title="Fit">Fit</a>
+                </span>
+                <span id="button-export">Export: 
+                    <a id="button-export-svg" href="#">SVG</a>
+                    <a id="button-export-png" href="#">PNG</a>
+                </span>
+            </nav>
             <svg id="restalk" style=""> </svg>
         </div>
         </main>
