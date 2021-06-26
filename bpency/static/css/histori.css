@@ -1,0 +1,33 @@
+body{
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background: #FAFAFA;
+}
+
+.search-line{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 369px;
+    top: 153px;
+
+}
+
+.input-field{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 20px;
+
+    position: absolute;
+    width: 353px;
+    height: 66px;
+    left: 65px;
+    top: 132px;
+
+    /* Gray/Default */
+
+    border: 2px solid #C2C9D1;
+    border-radius: 5px;
+}
