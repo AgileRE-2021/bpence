@@ -10,7 +10,6 @@
 
 body {
   background: rgba(44,43,55,1);
-  overflow: hidden; /* Hide scrollbars */
 }
 
 .row {

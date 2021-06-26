@@ -83,7 +83,7 @@ def konversi(request):
 
         bpmn = BPMN(code=hasil)
         bpmn.save()
-        return HttpResponseRedirect("/konversi/result")
+        return HttpResponseRedirect("/jajal")
 
     return render(request, 'bpency/konversi.html')
 
@@ -103,8 +103,11 @@ def signup(request):
     return render(request, 'bpency/signup.html')
 
 def jajal(request):
-    bpmn = BPMN.objects.all()
-    return render(request, 'bpency/jajal.html')
+    bpmns = BPMN.objects.last()
+    context = {
+        'bpmns':bpmns,
+    }
+    return render(request, 'bpency/jajal.html',context)
 
 def konvresult(request):
     
@@ -112,3 +115,6 @@ def konvresult(request):
 
 def konvload(request):
     return render(request, 'bpency/konv-load.html')
+
+def histori(request):
+    return render(request, 'bpency/histori.html')

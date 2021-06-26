@@ -26,16 +26,11 @@
         <a class="close" href="#">&times;</a>
     </aside>
     <main>
+        {%if bpmns%}
         <textarea id="logtext" oninput="live(this.value+'\n',true);" placeholder="What&#39;s your process like today?" disabled>
-Welcome to BPMN Sketch Miner:
-
-Draw simple BPMN diagrams
-(timer quickly)
-as you describe them with stories
-
-///Start by writing your list of tasks
-///one on each line...
+{{bpmns.code}}
         </textarea>
+        {%endif%}
         <div class="second-nav">
             <nav>
                 <span id="button-option-layout">Layout: 

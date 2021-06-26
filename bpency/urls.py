@@ -18,6 +18,8 @@ urlpatterns = [
     path('konversi-load', views.konvload, name='loading_konversi'),
     # ex: /konversi/result
     path('konversi/result', views.konvresult, name='hasil_konversi'),
+    # ex: /history
+    path('history', views.histori, name='histori'),
 
     path('jajal', views.jajal, name='jajal'),
 ]
