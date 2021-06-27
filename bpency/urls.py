@@ -14,6 +14,12 @@ urlpatterns = [
     path('signup', views.signup, name='signup'),
     # ex: /konversi
     path('konversi', views.konversi, name='konversi'),
+    # ex: /edit/1
+    path('edit/<int:id>', views.edit),
+    # ex: /update/1
+    path('update/<int:id>', views.update),
+    # ex: /delete/1
+    path('delete/<int:id>', views.destroy),
     # ex: /konversi-load
     path('konversi-load', views.konvload, name='loading_konversi'),
     # ex: /history

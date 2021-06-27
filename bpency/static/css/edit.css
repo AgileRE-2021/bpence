@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: rgba(44,43,55,1);
+}
+
+.row {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.navbar{
+  margin-top: 20px;
+  margin-bottom: 38px;
+}
+
+.btn{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.navbar-brand{
+  margin-left: 65px;
+}
+
+.rightside{
+  margin-right: 65px;
+  float: right;
+  position: relative;
+}
+
+.btn-secondary{
+  background-color: #F0EEEC;
+  border-color: #fff;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.column{
+  flex: 50%;
+  padding-left: 60px;
+}
+
+.column-2{
+  flex: 50%;
+  display: block;
+}
+
+/*heading 1*/
+h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  letter-spacing: 0.5px;
+}
+
+.column h1 {
+  color: #E0C19F;
+}
+
+.column-2 h1 {
+  color: #FAFAFA;
+  text-align: center;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+
+.column p {
+  color: #78768B;
+}
+
+.column-2 p {
+  font-size: 24px;
+  line-height: normal;
+  color: #FAFAFA;
+  text-align: center;
+}
+
+input  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+
+  width: 570px;
+  height: 259px;
+  left: 0px;
+  top: 0px;
+
+  background-color: transparent;
+  color: white;
+  /* Gray/Default */
+
+  border: 2px solid #C2C9D1;
+  border-radius: 5px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 13.5px 0px;
+}
+
+.button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-decoration: none;
+
+  width: 364px;
+  height: 58px;
+  left: 0px;
+  top: 0px;
+
+  /* Gray/Default */
+
+  border-radius: 5px;
+  background: #E7D7C1;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 13.5px 0px;
+}
+
+input[type=submit] {
+  /*the button*/
+  font-family: 'Poppins', sans-serif;
+  background-color: #E7D7C1;
+  color: black;
+  padding: 20px;
+  border: 0;
+  border-radius: 5px;
+  width: 570px;
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /*font*/
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+input[type=submit]:hover {
+  opacity: 1;
+  background-color: #DDC6A7;
+  color: white;
+}
+
+.v4_299 {
+  width: 425px;
+  height: 135px;
+  background: url("../images/v4_299.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 9px;
+  opacity: 1;
+  position: absolute;
+  top: 304px;
+  left: 0px;
+  overflow: hidden;
+}
+
+lottie-player {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name {
+  color: #fff;
+}
+
+/* Form */
+.box-login{
+  margin-top: 30px;
+  padding: 70px;
+  padding-top: 190px;
+
+  position: static;
+  width: 700px;
+  height: 259px;
+  left: 0px;
+  top: 40px;
+}
+
+.form-plantuml{
+  /* Auto Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+
+  position: static;
+  width: 570px;
+  height: 259px;
+  left: 0px;
+  top: 0px;
+
+  /* Gray/Default */
+  border: 2px solid #C2C9D1;
+  border-radius: 5px;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  margin: 27px 0px;
+}
+
+.btn-konv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: none;
+  font-weight: bold;
+
+  position: static;
+  width: 570px;
+  height: 67px;
+  left: 0px;
+  top: 297px;
+  cursor: pointer;
+
+  background: #E7D7C1;
+  border-radius: 5px;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 38px 0px;
+}

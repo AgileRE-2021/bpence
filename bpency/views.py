@@ -1,7 +1,9 @@
+import hashlib
+
 from django.http import HttpResponse
 from django.http.response import HttpResponseRedirect
 from django.template import Context, loader
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import SD, userD, BPMN
 
 def index(request):
@@ -113,4 +115,27 @@ def konvload(request):
     return render(request, 'bpency/konv-load.html')
 
 def histori(request):
-    return render(request, 'bpency/histori.html')
+    SDs = SD.objects.all()
+    return render(request, 'bpency/histori.html', {'SDs': SDs})
+
+def edit (request, id):
+    SDs = SD.objects.get(id=id)
+    return render(request, 'bpency/edit.html', {'SDs':SDs})
+
+def update(request, id):
+    SDs = SD.objects.get(id=id)
+
+    if request.method == 'POST':
+        sds = request.POST["codeplant"]
+        sd = SD.objects.filter(id=id)
+        for s in sd :
+            s.code=sds
+            s.save()
+        return redirect("/hasil")
+
+    return render(request, 'bpency/edit.html', {'SDs':SDs})
+def destroy(request, id):
+    SDs = SD.objects.get(id=id)
+    SDs.delete()
+    return redirect("/history")
+
