@@ -33,6 +33,6 @@ C. Mengakses Situs <br />
 Cara menggunakan:<br/>
 1. Klik tombol "Mulai konversi". <br/>
 2. Tempelkan kode PlantUML berformatkan sequence diagram di textarea yang tersedia.<br/>
-   Sesudahnya, klik tombol "Submit".
+   Sesudahnya, klik tombol "Submit".<br/>
 3. Hasil konversi akan muncul. Anda dapat menyimpan diagram dalam format SVG maupun PNG<br/>
    dengan mengklik tombol yang tersedia.
