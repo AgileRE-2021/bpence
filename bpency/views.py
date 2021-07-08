@@ -5,6 +5,7 @@ from django.http.response import HttpResponseRedirect
 from django.template import Context, loader
 from django.shortcuts import render, redirect
 from .models import SD, userD, BPMN
+from django.contrib import messages
 
 def index(request):
     return render(request, 'bpency/index.html')
@@ -25,67 +26,74 @@ def konversi(request):
         sd.save()
 
         x = []
-        sd = []
+        sd1 = []
 
         seq = sequ.split('\n')
 
         for i in range (len(seq)):
             x += [seq[i].replace('\r','')] 
 
-        for i in range (len(x)):
-            if ' -> ' in x[i]:
-                sd += [x[i]]
-            if 'opt ' in x[i]:
-                sd += [x[i]]
-            if 'alt ' in x[i]:
-                sd += [x[i]]
-            if 'ref ' in x[i]:
-                sd += [x[i]]
-            if x[i] == 'end alt':
-                sd += [x[i]]
-            if x[i] == 'end opt':
-                sd += [x[i]]
-            if x[i] == 'else':
-                sd += [x[i]]
+        if '@startuml' in x[0]:
+            if '@enduml' in x[-1]:
+                for i in range (len(x)):
+                    if ' -> ' in x[i]:
+                        sd1 += [x[i]]
+                    if 'opt ' in x[i]:
+                        sd1 += [x[i]]
+                    if 'alt ' in x[i]:
+                        sd1 += [x[i]]
+                    if 'ref ' in x[i]:
+                        sd1 += [x[i]]
+                    if x[i] == 'end alt':
+                        sd1 += [x[i]]
+                    if x[i] == 'end opt':
+                        sd1 += [x[i]]
+                    if x[i] == 'else':
+                        sd1 += [x[i]]
 
-        task = []
+                task = []
 
-        for i in range (len(sd)):
+                for i in range (len(sd1)):
 
-            if ' -> ' in sd[i]:
-                splitt = sd[i].split(' -> ')
-                task += [splitt[1]]
-            if 'ref ' in sd[i]:
-                splitt = sd[i].split(',')
-                task += [splitt[1]]
-            if sd[i] == 'end opt':
-                task += ['']
-                for j in range (len(sd)):
-                    if 'opt ' in sd[j]:
-                        splitt = sd[j-1].split(' -> ')
+                    if ' -> ' in sd1[i]:
+                        splitt = sd1[i].split(' -> ')
                         task += [splitt[1]]
-            if sd[i] == 'else':
-                for j in range (len(sd)):
-                    if sd[j] == 'end alt':
-                        if j < (len(sd)-1):
-                            splitt = sd[j+1].split(' -> ')
-                            task += [splitt[1]]
-                task+= ['']
-                for j in range (len(sd)):
-                    if 'alt ' in sd[j]:
-                        splitt = sd[j - 1].split(' -> ')
+                    if 'ref ' in sd1[i]:
+                        splitt = sd1[i].split(',')
                         task += [splitt[1]]
+                    if sd1[i] == 'end opt':
+                        task += ['']
+                        for j in range (len(sd1)):
+                            if 'opt ' in sd1[j]:
+                                splitt = sd1[j-1].split(' -> ')
+                                task += [splitt[1]]
+                    if sd1[i] == 'else':
+                        for j in range (len(sd1)):
+                            if sd1[j] == 'end alt':
+                                if j < (len(sd1)-1):
+                                    splitt = sd1[j+1].split(' -> ')
+                                    task += [splitt[1]]
+                        task+= ['']
+                        for j in range (len(sd1)):
+                            if 'alt ' in sd1[j]:
+                                splitt = sd1[j - 1].split(' -> ')
+                                task += [splitt[1]]
 
-        hasil = ""
+                hasil = ""
 
-        for i in range (len(task)):
-            task[i] = task[i].replace('_',' ').replace('()','').replace('(',' ').replace(')',' ')
-            hasil += task[i]
-            hasil += "\n"
+                for i in range (len(task)):
+                    task[i] = task[i].replace('_',' ').replace('()','').replace('(',' ').replace(')',' ').replace('"','')
+                    hasil += task[i]
+                    hasil += "\n"
 
-        bpmn = BPMN(code=hasil)
-        bpmn.save()
-        return HttpResponseRedirect("/hasil")
+                bpmn = BPMN(code=hasil)
+                sd.save()
+                bpmn.save()
+                return HttpResponseRedirect("/hasil")
+            else:
+                messages.error(request, "there is no @enduml!")
+        else:
+            messages.error(request, "there is no @startuml")
 
     return render(request, 'bpency/konversi.html')
 
