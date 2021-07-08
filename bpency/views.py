@@ -91,9 +91,9 @@ def konversi(request):
                 bpmn.save()
                 return HttpResponseRedirect("/hasil")
             else:
-                messages.error(request, "there is no @enduml!")
+                messages.error(request, "Mohon menambahkan @enduml di akhir kode.")
         else:
-            messages.error(request, "there is no @startuml")
+            messages.error(request, "Mohon menambahkan @startuml di awal kode.")
 
     return render(request, 'bpency/konversi.html')
 

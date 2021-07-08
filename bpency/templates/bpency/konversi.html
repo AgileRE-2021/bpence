@@ -8,10 +8,9 @@
         <link rel="stylesheet" href="{% static 'css/login.css'%}">
         <!--konversi-->
         <link rel="stylesheet" href="{% static 'css/konversi.css'%}">
-        <title>Loading...</title>
+        <title>Konversi | bpence</title>
     </head>
     <body>
-        {% include 'bpency/_messages.html '%}
         <div class="row">
             <nav class="navbar navbar-dark">
                 <a class="navbar-brand" href="/">
@@ -26,6 +25,7 @@
             <div class="column">
                 <h1>Masukkan sequence diagram</h1>
                 <p>Mohon menempelkan kode PlantUML sequence diagram di sini.<br/>Kode lain tidak akan bekerja.</p>
+                <!--alert-->{% include 'bpency/_messages.html '%}
                 <form method="POST">
                     {% csrf_token %}
                     <textarea  name="codeplant" class="codeplant" placeholder="Tempelkan kode PlantUML di sini..." required></textarea>
