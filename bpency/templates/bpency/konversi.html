@@ -26,7 +26,7 @@
                 <p>Mohon menempelkan kode PlantUML sequence diagram di sini.<br/>Kode lain tidak akan bekerja.</p>
                 <form method="POST">
                     {% csrf_token %}
-                    <textarea  name="codeplant" class="codeplant" placeholder="Tempelkan kode PlantUML di sini..."></textarea>
+                    <textarea  name="codeplant" class="codeplant" placeholder="Tempelkan kode PlantUML di sini..." required></textarea>
                     </br>
                     <input type="submit" id="sequence">
                 </form>
