@@ -25,7 +25,6 @@
             <div class="column">
                 <h1>Masukkan sequence diagram</h1>
                 <p>Mohon menempelkan kode PlantUML sequence diagram di sini.<br/>Kode lain tidak akan bekerja.</p>
-                <!--alert{% include 'bpency/_messages.html '%}-->
                 <form method="POST">
                     {% csrf_token %}
                     <textarea  id="codeplant" name="codeplant" class="codeplant" placeholder="Tempelkan kode PlantUML di sini..." required></textarea>
