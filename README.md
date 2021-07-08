@@ -29,7 +29,7 @@ C. Mengakses Situs <br />
    1. Menjalankan server dengan python manage.py runserver via terminal.<br />
    2. Buka browser Anda dan akses localhost:8000.<br />
    3. Situs berhasil diakses. <br />
-
+<br/>
 Cara menggunakan:<br/>
 1. Klik tombol "Mulai konversi". <br/>
 2. Tempelkan kode PlantUML berformatkan sequence diagram di textarea yang tersedia.<br/>
